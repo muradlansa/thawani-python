@@ -9,7 +9,7 @@ setup(
     description="Thawani Python Client",
     long_description=readme_content,
     long_description_content_type='text/markdown',
-    url="https://github.com/thawani/thawani-python",
+    url="https://github.com/muradlansa/thawani-python",
     author="Murad Lansa",
     author_email="mail@muradlansa.com",
     license="MIT",
