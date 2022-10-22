@@ -1,4 +1,4 @@
-# thawani Python Client
+# Thawani Python Client
 
 
 Python bindings for interacting with the thawani API
@@ -68,5 +68,5 @@ that both app title and version are strings.
 
 All of those are welcome. You can [file issues][issues] or [submit pull requests][pulls] in this repository.
 
-[issues]: https://github.com/thawani-pay/thawani-python/issues
-[pulls]: https://github.com/thawani-pay/thawani-python/pulls
+[issues]: https://github.com/muradlansa/thawani-python/issues
+[pulls]: https://github.com/muradlansa/thawani-python/pulls
