@@ -16,7 +16,8 @@ from .registration_link import RegistrationLink
 from .settlement import Settlement
 from .item import Item
 from .fund_account import FundAccount
-
+from .checkout import Checkout
+from .payment_method import PaymentMethod
 __all__ = [
     'Payment',
     'Refund',
@@ -35,5 +36,7 @@ __all__ = [
     'Settlement',
     'Item',
     'QrCode',
-    'FundAccount'
+    'FundAccount',
+    'Checkout',
+    'PaymentMethod'
 ]

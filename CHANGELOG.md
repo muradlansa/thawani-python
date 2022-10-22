@@ -34,9 +34,9 @@ All notable changes to this project will be documented in this file. The format 
 
 ### Added
 
--   New Settlement read APIs [[#61](https://github.com/razorpay/razorpay-python/pull/61)]
--   New APIs for Invoices (Issue/Delete/(re)Send/Edit/Cancel) [[#61](https://github.com/razorpay/razorpay-python/pull/61)]
--   New APIs for Payment Links ((re)Send Notification/Cancel) [[#61](https://github.com/razorpay/razorpay-python/pull/61)]
+-   New Settlement read APIs [[#61](https://github.com/thawani/thawani-python/pull/61)]
+-   New APIs for Invoices (Issue/Delete/(re)Send/Edit/Cancel) [[#61](https://github.com/thawani/thawani-python/pull/61)]
+-   New APIs for Payment Links ((re)Send Notification/Cancel) [[#61](https://github.com/thawani/thawani-python/pull/61)]
 
 ## [1.1.1][1.1.1] - 2018-01-15
 
@@ -111,12 +111,12 @@ All notable changes to this project will be documented in this file. The format 
 -   Payments: List, fetch and capture payments.
 -   Refunds: List, fetch and initiate refunds.
 
-[unreleased]: https://github.com/razorpay/razorpay-python/compare/1.2.0...HEAD
-[1.2.0]: https://github.com/razorpay/razorpay-python/compare/1.1.1...1.2.0
-[1.1.1]: https://github.com/razorpay/razorpay-python/compare/1.1.0...1.1.1
-[1.1.0]: https://github.com/razorpay/razorpay-python/compare/1.0.2...1.1.0
-[1.0.2]: https://github.com/razorpay/razorpay-python/compare/1.0.1...1.0.2
-[1.0.1]: https://github.com/razorpay/razorpay-python/compare/1.0.0...1.0.1
-[1.0.0]: https://github.com/razorpay/razorpay-python/compare/0.2.0...1.0.0
-[0.2.0]: https://github.com/razorpay/razorpay-python/compare/0.1.0...0.2.0
-[0.1.0]: https://github.com/razorpay/razorpay-python/compare/0.1.0-alpha...0.1.0
+[unreleased]: https://github.com/thawani/thawani-python/compare/1.2.0...HEAD
+[1.2.0]: https://github.com/thawani/thawani-python/compare/1.1.1...1.2.0
+[1.1.1]: https://github.com/thawani/thawani-python/compare/1.1.0...1.1.1
+[1.1.0]: https://github.com/thawani/thawani-python/compare/1.0.2...1.1.0
+[1.0.2]: https://github.com/thawani/thawani-python/compare/1.0.1...1.0.2
+[1.0.1]: https://github.com/thawani/thawani-python/compare/1.0.0...1.0.1
+[1.0.0]: https://github.com/thawani/thawani-python/compare/0.2.0...1.0.0
+[0.2.0]: https://github.com/thawani/thawani-python/compare/0.1.0...0.2.0
+[0.1.0]: https://github.com/thawani/thawani-python/compare/0.1.0-alpha...0.1.0

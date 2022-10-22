@@ -272,7 +272,7 @@ client.settlement.create_ondemand_settlement({
 }
 ```
 
-Create on-demand settlement please click [here](https://razorpay.com/docs/api/settlements/instant/#create-an-instant-settlement)
+Create on-demand settlement please click [here](https://thawani.com/docs/api/settlements/instant/#create-an-instant-settlement)
 
 -------------------------------------------------------------------------------------------------------
 
@@ -381,4 +381,4 @@ client.settlement.fetch_ondemand_settlement_id(settlementId)
 **PN: * indicates mandatory fields**
 <br>
 <br>
-**For reference click [here](https://razorpay.com/docs/api/settlements/)**
+**For reference click [here](https://thawani.com/docs/api/settlements/)**

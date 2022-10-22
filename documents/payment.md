@@ -296,7 +296,7 @@ client.payment.all({'expand[]':'emi'})
 ```
 
 **Response:**<br>
-For expanded card or emi details for payments response please click [here](https://razorpay.com/docs/api/payments/#fetch-expanded-card-or-emi-details-for-payments)
+For expanded card or emi details for payments response please click [here](https://thawani.com/docs/api/payments/#fetch-expanded-card-or-emi-details-for-payments)
 
 -------------------------------------------------------------------------------------------------------
 
@@ -336,7 +336,7 @@ client.payment.fetchCardDetails(paymentId)
 client.payment.fetchDownTime()
 ```
 **Response:** <br>
-For payment downtime response please click [here](https://razorpay.com/docs/api/payments/downtime/#fetch-payment-downtime-details)
+For payment downtime response please click [here](https://thawani.com/docs/api/payments/downtime/#fetch-payment-downtime-details)
 
 -------------------------------------------------------------------------------------------------------
 
@@ -353,7 +353,7 @@ client.payment.fetchPaymentDowntimeById(downtimeId)
 | downtimeId* | string  | Id to fetch payment downtime         |
 
 **Response:**
-For payment downtime by id response please click [here](https://razorpay.com/docs/api/payments/downtime/#fetch-payment-downtime-details-by-id)
+For payment downtime by id response please click [here](https://thawani.com/docs/api/payments/downtime/#fetch-payment-downtime-details-by-id)
 -------------------------------------------------------------------------------------------------------
 
 ### Payment capture settings API
@@ -381,7 +381,7 @@ client.order.create({
 | amount*          | integer | Amount of the order to be paid                                               |
 | currency*        | string  | Currency of the order. Currently only `INR` is supported.       |
 | receipt         | string  | Your system order reference id.                                              |
-| payment         | object  | please refer this [doc](https://razorpay.com/docs/payments/payments/capture-settings/api/) for params       |
+| payment         | object  | please refer this [doc](https://thawani.com/docs/payments/payments/capture-settings/api/) for params       |
 | notes       | object  | A key-value pair  |
 
 **Response:** <br>
@@ -427,20 +427,20 @@ client.payment.createPaymentJson({
 ```
 
 **Parameters:**
- please refer this [doc](https://razorpay.com/docs/payment-gateway/s2s-integration/payment-methods/) for params
+ please refer this [doc](https://thawani.com/docs/payment-gateway/s2s-integration/payment-methods/) for params
 
 **Response:** <br>
 ```json
 {
-  "razorpay_payment_id": "pay_FVmAstJWfsD3SO",
+  "thawani_payment_id": "pay_FVmAstJWfsD3SO",
   "next": [
     {
       "action": "redirect",
-      "url": "https://api.razorpay.com/v1/payments/FVmAtLUe9XZSGM/authorize"
+      "url": "https://api.thawani.com/v1/payments/FVmAtLUe9XZSGM/authorize"
     },
     {
       "action": "otp_generate",
-      "url": "https://api.razorpay.com/v1/payments/pay_FVmAstJWfsD3SO/otp_generate?track_id=FVmAtLUe9XZSGM&key_id=<YOUR_KEY_ID>"
+      "url": "https://api.thawani.com/v1/payments/pay_FVmAstJWfsD3SO/otp_generate?track_id=FVmAtLUe9XZSGM&key_id=<YOUR_KEY_ID>"
     }
   ]
 }
@@ -472,16 +472,16 @@ client.payment.createPaymentJson({
 | method*      | string  | Possible value is `netbanking` |
 | bank*      | string      | The customer's bank code.For example, `HDFC`.|
 
- please refer this [doc](https://razorpay.com/docs/payments/third-party-validation/s2s-integration/netbanking#step-3-create-a-payment) for params
+ please refer this [doc](https://thawani.com/docs/payments/third-party-validation/s2s-integration/netbanking#step-3-create-a-payment) for params
 
 **Response:** <br>
 ```json
 {
-  "razorpay_payment_id": "pay_GAWOYqPlvrtPSi",
+  "thawani_payment_id": "pay_GAWOYqPlvrtPSi",
   "next": [
     {
       "action": "redirect",
-      "url": "https://api.razorpay.com/v1/payments/pay_GAWOYqPlvrtPSi/authorize"
+      "url": "https://api.thawani.com/v1/payments/pay_GAWOYqPlvrtPSi/authorize"
     }
   ]
 }
@@ -526,16 +526,16 @@ client.payment.createUpi({
 | notes | array  | A key-value pair  |
 | description | string  | Descriptive text of the payment. |
 | save | boolean  |  Specifies if the VPA should be stored as tokens.Possible value is `0`, `1`  |
-| callback_url   | string      | URL where Razorpay will submit the final payment status. |
+| callback_url   | string      | URL where thawani will submit the final payment status. |
 | ip*   | string      | The client's browser IP address. For example `117.217.74.98` |
 | referer*   | string      | Value of `referer` header passed by the client's browser. For example, `https://example.com/` |
 | user_agent*   | string      | Value of `user_agent` header passed by the client's browser. For example, `Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36` |
-| upi* (for Upi only)  | array      | All keys listed [here](https://razorpay.com/docs/payments/third-party-validation/s2s-integration/upi/collect#step-14-initiate-a-payment) are supported  |
+| upi* (for Upi only)  | array      | All keys listed [here](https://thawani.com/docs/payments/third-party-validation/s2s-integration/upi/collect#step-14-initiate-a-payment) are supported  |
 
 **Response:** <br>
 ```json
 {
-  "razorpay_payment_id": "pay_EAm09NKReXi2e0"
+  "thawani_payment_id": "pay_EAm09NKReXi2e0"
 }
 ```
 -------------------------------------------------------------------------------------------------------
@@ -574,17 +574,17 @@ client.payment.createUpi({
 | notes | array  | A key-value pair  |
 | description | string  | Descriptive text of the payment. |
 | save | boolean  |  Specifies if the VPA should be stored as tokens.Possible value is `0`, `1`  |
-| callback_url   | string      | URL where Razorpay will submit the final payment status. |
+| callback_url   | string      | URL where thawani will submit the final payment status. |
 | ip*   | string      | The client's browser IP address. For example `117.217.74.98` |
 | referer*   | string      | Value of `referer` header passed by the client's browser. For example, `https://example.com/` |
 | user_agent*   | string      | Value of `user_agent` header passed by the client's browser. For example, `Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36` |
-| upi* (for Upi only)  | array      | All keys listed [here](https://razorpay.com/docs/payments/third-party-validation/s2s-integration/upi/intent/#step-2-initiate-a-payment) are supported  |
+| upi* (for Upi only)  | array      | All keys listed [here](https://thawani.com/docs/payments/third-party-validation/s2s-integration/upi/intent/#step-2-initiate-a-payment) are supported  |
 
 **Response:** <br>
 ```json
 {
-  "razorpay_payment_id": "pay_CMeM6XvOPGFiF",
-  "link": "upi://pay?pa=success@razorpay&pn=xyz&tr=xxxxxxxxxxx&tn=gourav&am=1&cu=INR&mc=xyzw"
+  "thawani_payment_id": "pay_CMeM6XvOPGFiF",
+  "link": "upi://pay?pa=success@thawani&pn=xyz&tr=xxxxxxxxxxx&tn=gourav&am=1&cu=INR&mc=xyzw"
 }  
 -------------------------------------------------------------------------------------------------------
 ### OTP Generate
@@ -599,21 +599,21 @@ client.payment.otpGenerate(paymentId)
 |-------------|---------|--------------------------------------|
 | paymentId*    | integer | Unique identifier of the payment                                               |
 
-Doc reference [doc](https://razorpay.com/docs/payments/payment-gateway/s2s-integration/json/v2/build-integration/cards/#otp-generation-)
+Doc reference [doc](https://thawani.com/docs/payments/payment-gateway/s2s-integration/json/v2/build-integration/cards/#otp-generation-)
 
 **Response:** <br>
 
 ```json
 {
- "razorpay_payment_id": "pay_FVmAstJWfsD3SO",
+ "thawani_payment_id": "pay_FVmAstJWfsD3SO",
  "next": [
   {
    "action": "otp_submit",
-   "url": "https://api.razorpay.com/v1/payments/pay_FVmAstJWfsD3SO/otp_submit/ac2d415a8be7595de09a24b41661729fd9028fdc?key_id=<YOUR_KEY_ID>"
+   "url": "https://api.thawani.com/v1/payments/pay_FVmAstJWfsD3SO/otp_submit/ac2d415a8be7595de09a24b41661729fd9028fdc?key_id=<YOUR_KEY_ID>"
   },
   {
    "action": "otp_resend",
-   "url": "https://api.razorpay.com/v1/payments/pay_FVmAstJWfsD3SO/otp_resend/json?key_id=<YOUR_KEY_ID>"
+   "url": "https://api.thawani.com/v1/payments/pay_FVmAstJWfsD3SO/otp_resend/json?key_id=<YOUR_KEY_ID>"
   }
  ],
  "metadata": {
@@ -641,15 +641,15 @@ client.payment.otpSubmit(paymentId,{
 | paymentId*    | integer | Unique identifier of the payment                                               |
 | otp*    | string | The customer receives the OTP using their preferred notification medium - SMS or email |
 
-Doc reference [doc](https://razorpay.com/docs/payments/payment-gateway/s2s-integration/json/v2/build-integration/cards/#response-on-submitting-otp)
+Doc reference [doc](https://thawani.com/docs/payments/payment-gateway/s2s-integration/json/v2/build-integration/cards/#response-on-submitting-otp)
 
 **Response:** <br>
 Success
 ```json
 {
- "razorpay_payment_id": "pay_D5jmY2H6vC7Cy3",
- "razorpay_order_id": "order_9A33XWu170gUtm",
- "razorpay_signature": "9ef4dffbfd84f1318f6739a3ce19f9d85851857ae648f114332d8401e0949a3d"
+ "thawani_payment_id": "pay_D5jmY2H6vC7Cy3",
+ "thawani_order_id": "order_9A33XWu170gUtm",
+ "thawani_signature": "9ef4dffbfd84f1318f6739a3ce19f9d85851857ae648f114332d8401e0949a3d"
 }
 ```
 -------------------------------------------------------------------------------------------------------
@@ -667,7 +667,7 @@ client.payment.validateVpa({
 |-------------|---------|--------------------------------------|
 | vpa*          | string | The virtual payment address (VPA) you want to validate. For example,   `gauravkumar@exampleupi`  |
 
- please refer this [doc](https://razorpay.com/docs/payments/third-party-validation/s2s-integration/upi/collect#step-13-validate-the-vpa) for params
+ please refer this [doc](https://thawani.com/docs/payments/third-party-validation/s2s-integration/upi/collect#step-13-validate-the-vpa) for params
 
 **Response:** <br>
 ```json
@@ -682,12 +682,12 @@ client.payment.validateVpa({
 ### Fetch payment methods (Third party validation)
 
 ```py
-client = razorpay.Client(auth=("key", "")) // Use Only razorpay key
+client = thawani.Client(auth=("key", "")) // Use Only thawani key
 client.payment.fetchPaymentMethods()
 ```
 
 **Response:** <br>
- please refer this [doc](https://razorpay.com/docs/payments/third-party-validation/s2s-integration/methods-api/#fetch-payment-methods) for response
+ please refer this [doc](https://thawani.com/docs/payments/third-party-validation/s2s-integration/methods-api/#fetch-payment-methods) for response
 
 ```
 =======
@@ -703,7 +703,7 @@ client.payment.otpResend(paymentId)
 |-------------|---------|--------------------------------------|
 | paymentId*    | integer | Unique identifier of the payment                                               |
 
-Doc reference [doc](https://razorpay.com/docs/payments/payment-methods/cards/authentication/native-otp/#otp-resend)
+Doc reference [doc](https://thawani.com/docs/payments/payment-methods/cards/authentication/native-otp/#otp-resend)
 
 **Response:** <br>
 
@@ -713,7 +713,7 @@ Doc reference [doc](https://razorpay.com/docs/payments/payment-methods/cards/aut
     "otp_submit",
     "otp_resend"
   ],
-  "razorpay_payment_id": "pay_JWaNvYmrx75sXo"
+  "thawani_payment_id": "pay_JWaNvYmrx75sXo"
 }
 ```
 -------------------------------------------------------------------------------------------------------
@@ -721,4 +721,4 @@ Doc reference [doc](https://razorpay.com/docs/payments/payment-methods/cards/aut
 **PN: * indicates mandatory fields**
 <br>
 <br>
-**For reference click [here](https://razorpay.com/docs/api/payments/)**
+**For reference click [here](https://thawani.com/docs/api/payments/)**

@@ -88,7 +88,7 @@ client.order.create({
 | customerId*   | string      | The id of the customer to be fetched |
 | method*      | string  | Payment method used to make the registration transaction. Possible value is `nach`.  |
 | receipt      | string  | Your system order reference id.  |
-| token  | array  | All parameters listed [here](https://razorpay.com/docs/api/payments/recurring-payments/paper-nach/create-authorization-transaction/#112-create-an-order) are supported |
+| token  | array  | All parameters listed [here](https://thawani.com/docs/api/payments/recurring-payments/paper-nach/create-authorization-transaction/#112-create-an-order) are supported |
 | notes | object  | A key-value pair  |
 
 **Response:**
@@ -154,7 +154,7 @@ client.order.create({
 
 ### Create an Authorization Payment
 
-Please refer this [doc](https://razorpay.com/docs/api/recurring-payments/paper-nach/authorization-transaction/#113-create-an-authorization-payment) for authorization payment
+Please refer this [doc](https://thawani.com/docs/api/recurring-payments/paper-nach/authorization-transaction/#113-create-an-authorization-payment) for authorization payment
 
 -------------------------------------------------------------------------------------------------------
 
@@ -199,7 +199,7 @@ client.registration_link.create({
 ```
 
 **Parameters:**
-All parameters listed [here](https://razorpay.com/docs/api/recurring-payments/paper-nach/authorization-transaction/#121-create-a-registration-link) are supported
+All parameters listed [here](https://thawani.com/docs/api/recurring-payments/paper-nach/authorization-transaction/#121-create-a-registration-link) are supported
 
 **Response:**
 ```json
@@ -674,9 +674,9 @@ client.payment.createRecurring({
 **Response:**
 ```json
 {
-  "razorpay_payment_id" : "pay_1Aa00000000001",
-  "razorpay_order_id" : "order_1Aa00000000001",
-  "razorpay_signature" : "9ef4dffbfd84f1318f6739a3ce19f9d85851857ae648f114332d8401e0949a3d"
+  "thawani_payment_id" : "pay_1Aa00000000001",
+  "thawani_order_id" : "order_1Aa00000000001",
+  "thawani_signature" : "9ef4dffbfd84f1318f6739a3ce19f9d85851857ae648f114332d8401e0949a3d"
 }
 ```
 -------------------------------------------------------------------------------------------------------
@@ -685,4 +685,4 @@ client.payment.createRecurring({
 **PN: * indicates mandatory fields**
 <br>
 <br>
-**For reference click [here](https://razorpay.com/docs/api/recurring-payments/paper-nach/authorization-transaction/)**
+**For reference click [here](https://thawani.com/docs/api/recurring-payments/paper-nach/authorization-transaction/)**

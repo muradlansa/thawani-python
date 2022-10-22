@@ -21,7 +21,7 @@ client.virtual_account.create({
 
 | Name          | Type        | Description                                 |
 |---------------|-------------|---------------------------------------------|
-| receivers*    | object      | All parameters listed [here](https://razorpay.com/docs/api/payments/smart-collect/#create-virtual-account) are supported  |
+| receivers*    | object      | All parameters listed [here](https://thawani.com/docs/api/payments/smart-collect/#create-virtual-account) are supported  |
 | description  | string      | A brief description of the virtual account.                    |
 | customer_id  | string      | Unique identifier of the customer to whom the virtual account must be tagged.                    |
 | close_by  | integer      | UNIX timestamp at which the virtual account is scheduled to be automatically closed.                  |
@@ -90,7 +90,7 @@ client.virtual_account.create({
 | Name          | Type        | Description                                 |
 |---------------|-------------|---------------------------------------------|
 | receivers*    | object      | Array that defines what receivers are available for this Virtual Account                        |
-| allowed_payers*  | object      | All parameters listed [here](https://razorpay.com/docs/api/smart-collect-tpv/#create-virtual-account) are supported |
+| allowed_payers*  | object      | All parameters listed [here](https://thawani.com/docs/api/smart-collect-tpv/#create-virtual-account) are supported |
 | description  | string      | A brief description of the virtual account.                    |
 | customer_id  | string      | Unique identifier of the customer to whom the virtual account must be tagged.                    |
 | notes  | integer      | Any custom notes you might want to add to the virtual account can be entered here.                  |
@@ -170,7 +170,7 @@ client.virtual_account.create({
 | description  | string      | A brief description of the payment.   |
 | customer_id  | string      | Unique identifier of the customer to whom the virtual account must be tagged.                    |
 | amount_expected  | integer   | The maximum amount you expect to receive in this virtual account. Pass `69999` for ₹699.99.   |
-| notes       | object | All keys listed [here](https://razorpay.com/docs/payments/payments/payment-methods/bharatqr/api/#create) are supported   |
+| notes       | object | All keys listed [here](https://thawani.com/docs/payments/payments/payment-methods/bharatqr/api/#create) are supported   |
 
 **Response:**
 ```json
@@ -214,7 +214,7 @@ client.virtual_account.fetch(virtualId)
 
 **Response:**
 
-For fetch virtual account by id response please click [here](https://razorpay.com/docs/api/smart-collect/#fetch-a-virtual-account-by-id)
+For fetch virtual account by id response please click [here](https://thawani.com/docs/api/smart-collect/#fetch-a-virtual-account-by-id)
 
 -------------------------------------------------------------------------------------------------------
 
@@ -450,12 +450,12 @@ client.virtual_account.add_receiver(virtualId,{
 
 | Name  | Type      | Description                                      |
 |-------|-----------|--------------------------------------------------|
-| virtualId*  | string    | All parameters listed [here](https://razorpay.com/docs/api/payments/smart-collect-tpv#add-receiver-to-an-existing-virtual-account) are supported  |
+| virtualId*  | string    | All parameters listed [here](https://thawani.com/docs/api/payments/smart-collect-tpv#add-receiver-to-an-existing-virtual-account) are supported  |
 | types*  | object | The receiver type to be added to the virtual account. Possible values are `vpa` or `bank_account`  |
 | vpa    | object | This is to be passed only when `vpa` is passed as the receiver types. |
 
 **Response:**
-For add receiver to an existing virtual account response please click [here](https://razorpay.com/docs/api/smart-collect/#add-receiver-to-an-existing-virtual-account)
+For add receiver to an existing virtual account response please click [here](https://thawani.com/docs/api/smart-collect/#add-receiver-to-an-existing-virtual-account)
 
 -------------------------------------------------------------------------------------------------------
 
@@ -549,10 +549,10 @@ client.virtual_account.close(virtualId)
 | virtualId*  | string    | The id of the virtual to be updated  |
 
 **Response:**
-For close virtual account response please click [here](https://razorpay.com/docs/api/smart-collect/#close-a-virtual-account)
+For close virtual account response please click [here](https://thawani.com/docs/api/smart-collect/#close-a-virtual-account)
 -------------------------------------------------------------------------------------------------------
 
 **PN: * indicates mandatory fields**
 <br>
 <br>
-**For reference click [here](https://razorpay.com/docs/smart-collect/api/)**
+**For reference click [here](https://thawani.com/docs/smart-collect/api/)**

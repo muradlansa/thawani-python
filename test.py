@@ -1,17 +1,21 @@
-import razorpay
+import thawani
 import requests
 from pprint import pprint
 import json
 
-client = razorpay.Client(auth=("rzp_test_k6uL897VPBz20q", "EnLs21M47BllR3X8PSFtjtbd"))
+client = thawani.Client( secret_key="rRQ26GcsZzoEhbrP2HZvLYDbn9C9et",publishable_key="HGvTMLDssJghr9tlN9gr4DVYt0qyBy")
 
 data = {"customer_id":"cust_JnFmpXS63vWgYJ"}
 
 #x = client.addon.delete("ao_JniYt836HF7aQm")
 
-x = client.transfer.all({
-  'expand[]':'recipient_settlement'  
-})
+# x = client.checkout.all({
+#   'limit':'1000','skip':"1"
+# })
+# print(json.dumps(x))
+
+
+x=client.payment_method.all(data={"customer_id":"cus_hW2fNmv9IvHkmLmK"})
 
 print(json.dumps(x))
 

@@ -148,4 +148,4 @@ client.customer.fetch(customerId)
 **PN: * indicates mandatory fields**
 <br>
 <br>
-**For reference click [here](https://razorpay.com/docs/api/customers/)**
+**For reference click [here](https://thawani.com/docs/api/customers/)**

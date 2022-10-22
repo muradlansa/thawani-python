@@ -9,7 +9,7 @@
         "currency": "INR",
         "customer": {
           "contact": "9999999999",
-          "email": "gaurav.kumar@razorpay.com",
+          "email": "gaurav.kumar@thawani.com",
           "name": "Gaurav Kumar"
         },
         "description": "Payment for policy no #23456",
@@ -45,7 +45,7 @@
         "currency": "INR",
         "customer": {
           "contact": "9999999999",
-          "email": "gaurav.kumar@razorpay.com"
+          "email": "gaurav.kumar@thawani.com"
         },
         "description": "Payment for Acme Inc",
         "expire_by": 0,

@@ -108,7 +108,7 @@ class Invoice(Resource):
             data : Dictionary having keys using which invoice have to be updated
         Returns:
             Its response is the invoice entity, similar to create/update API response. Its status now would be issued.
-            Refer https://razorpay.com/docs/invoices/api/#entity-structure
+            Refer https://thawani.com/docs/invoices/api/#entity-structure
         """
         url = "{}/{}".format(self.base_url, invoice_id)
         return self.patch_url(url, data, **kwargs)

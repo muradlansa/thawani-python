@@ -72,7 +72,7 @@ client.payment_link.create({
 |description           | string  | A brief description of the Payment Link                     |
 |first_min_partial_amount           | integer  |Minimum amount, in currency subunits, that must be paid by the customer as the first partial payment. // UPI Payment Link is not supported partial payment  |
 |reference_id           | string  | Reference number tagged to a Payment Link.                      |
-|customer           | object  | All parameters listed [here](https://razorpay.com/docs/api/payments/payment-links/#sample-codes-for-upi-payment-links) are supported                 |
+|customer           | object  | All parameters listed [here](https://thawani.com/docs/api/payments/payment-links/#sample-codes-for-upi-payment-links) are supported                 |
 |expire_by           | integer  | Timestamp, in Unix, at which the Payment Link will expire. By default, a Payment Link will be valid for six months from the date of creation.                     |
 |notify           | object  | sms or email (boolean)                     |
 |notes           | json object  | Key-value pair that can be used to store additional information about the entity. Maximum 15 key-value pairs, 256 characters (maximum) each. For example, "note_key": "Beam me up Scotty”                     |
@@ -81,7 +81,7 @@ client.payment_link.create({
 | reminder_enable | boolean | Used to send reminders for the Payment Link. Possible values is `true` or `false` |
 
 **Response:**
-For create payment link response please click [here](https://razorpay.com/docs/api/payment-links/#create-payment-link)
+For create payment link response please click [here](https://thawani.com/docs/api/payment-links/#create-payment-link)
 
 -------------------------------------------------------------------------------------------------------
 
@@ -99,7 +99,7 @@ client.payment_link.all()
 |reference_id        | string  | The unique reference number entered by you while creating the Payment Link.                     |
 
 **Response:**
-For fetch all payment link response please click [here](https://razorpay.com/docs/api/payment-links/#all-payment-links)
+For fetch all payment link response please click [here](https://thawani.com/docs/api/payment-links/#all-payment-links)
 
 -------------------------------------------------------------------------------------------------------
 
@@ -116,7 +116,7 @@ client.payment_link.fetch(paymentLinkId)
 | paymentLinkId*          | string |  Unique identifier of the Payment Link.                         |
 
 **Response:**
-For fetch specific payment link response please click [here](https://razorpay.com/docs/api/payment-links/#specific-payment-links-by-id)
+For fetch specific payment link response please click [here](https://thawani.com/docs/api/payment-links/#specific-payment-links-by-id)
 
 -------------------------------------------------------------------------------------------------------
 
@@ -144,7 +144,7 @@ client.payment_link.edit(paymentLinkId, {
 | notes          | string | object Key-value pair that can be used to store additional information about the entity. Maximum 15 key-value pairs, 256 characters (maximum) each. For example, "note_key": "Beam me up Scotty”.                         |
 
 **Response:**
-For updating payment link response please click [here](https://razorpay.com/docs/api/payment-links/#update-payment-link)
+For updating payment link response please click [here](https://thawani.com/docs/api/payment-links/#update-payment-link)
 
 -------------------------------------------------------------------------------------------------------
 
@@ -161,7 +161,7 @@ client.payment_link.cancel(paymentLinkId)
 | paymentLinkId*          | string | Unique identifier of the Payment Link.                         |
 
 **Response:**
-For canceling payment link response please click [here](https://razorpay.com/docs/api/payment-links/#cancel-payment-link)
+For canceling payment link response please click [here](https://thawani.com/docs/api/payment-links/#cancel-payment-link)
 -------------------------------------------------------------------------------------------------------
 
 ### Send notification
@@ -664,7 +664,7 @@ client.payment_link.create({
 |options*       | array  | Options to customize Checkout. Parent parameter under which the checkout and prefill child parameters must be passed.|
 
 **Response:**
-For prefill checkout fields response please click [here](https://razorpay.com/docs/payment-links/api/new/advanced-options/customize/prefill/)
+For prefill checkout fields response please click [here](https://thawani.com/docs/payment-links/api/new/advanced-options/customize/prefill/)
 
 -------------------------------------------------------------------------------------------------------
 
@@ -973,11 +973,11 @@ client.payment_link.create({
 |options*       | object  | Parent parameter under which the hosted_page and label child parameters must be passed.|
 
 **Response:**
-For rename labels in payment details section response please click [here](https://razorpay.com/docs/payment-links/api/new/advanced-options/customize/rename-payment-details-labels/)
+For rename labels in payment details section response please click [here](https://thawani.com/docs/payment-links/api/new/advanced-options/customize/rename-payment-details-labels/)
 
 -------------------------------------------------------------------------------------------------------
 
 **PN: * indicates mandatory fields**
 <br>
 <br>
-**For reference click [here](https://razorpay.com/docs/api/payment-links/)**
+**For reference click [here](https://thawani.com/docs/api/payment-links/)**

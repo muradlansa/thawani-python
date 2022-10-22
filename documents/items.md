@@ -186,4 +186,4 @@ client.item.delete(itemId)
 **PN: * indicates mandatory fields**
 <br>
 <br>
-**For reference click [here](https://razorpay.com/docs/api/items)**
+**For reference click [here](https://thawani.com/docs/api/items)**

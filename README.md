@@ -1,31 +1,30 @@
-# Razorpay Python Client
+# thawani Python Client
 
-[![PyPI Version](https://img.shields.io/pypi/v/razorpay.svg)](https://pypi.python.org/pypi/razorpay) [![Coverage Status](https://coveralls.io/repos/github/razorpay/razorpay-python/badge.svg?branch=master)](https://coveralls.io/github/razorpay/razorpay-python?branch=master) [![PyPI](https://img.shields.io/pypi/pyversions/razorpay.svg)]() [![License](https://img.shields.io/:license-mit-blue.svg)](https://opensource.org/licenses/MIT)
 
-Python bindings for interacting with the Razorpay API
+Python bindings for interacting with the thawani API
 
-This is primarily meant for merchants who wish to perform interactions with the Razorpay API programatically.
+This is primarily meant for merchants who wish to perform interactions with the thawani API programatically.
 
 ## Installation
 
 ```sh
-$ pip install razorpay
+$ pip install thawani
 ```
 
 ## Usage
 
 You need to setup your key and secret using the following:
-You can find your API keys at <https://dashboard.razorpay.com/#/app/keys>.
+You can find your API keys at <https://thawani.om//#/app/keys>.
 
 ```py
-import razorpay
-client = razorpay.Client(auth=("<YOUR_API_KEY>", "<YOUR_API_SECRET>"))
+import thawani
+client = thawani.Client(secret_key="<Secret_KEY>",publishable_key="<Publishable_KEY>")
 ```
 
 ## App Details
 
 After setting up client, you can set your app details before making any request
-to Razorpay using the following:
+to thawani using the following:
 
 ```py
 client.set_app_details({"title" : "<YOUR_APP_TITLE>", "version" : "<YOUR_APP_VERSION>"})
@@ -35,15 +34,11 @@ For example, you can set the title to `Django` and version to `1.8.17`. Please e
 that both app title and version are strings.
 
 ## Supported Resources
-- [Addon](documents/addon.md)
 
-- [Item](documents/items.md)
 
 - [Customer](documents/customer.md)
 
 - [Token](documents/token.md)
-
-- [Fund](documents/fund.md)
 
 - [Order](documents/order.md)
 
@@ -61,28 +56,17 @@ that both app title and version are strings.
 
 - [Smart Collect](documents/virtualAccount.md)
 
-- [Route](documents/transfer.md)
 
-- [QR Code](documents/qrcode.md)
 
-- [Emandate](documents/emandate.md)
 
-- [Cards](documents/card.md)
 
-- [Paper NACH](documents/papernach.md)
 
-- [UPI](documents/upi.md)
 
-- [Register Emandate and Charge First Payment Together](documents/registerEmandate.md)
-
-- [Register NACH and Charge First Payment Together](documents/registerNach.md)
-
-- [Payment Verification](documents/paymentVerfication.md)
 ---
 
 ## Bugs? Feature requests? Pull requests?
 
 All of those are welcome. You can [file issues][issues] or [submit pull requests][pulls] in this repository.
 
-[issues]: https://github.com/razorpay/razorpay-python/issues
-[pulls]: https://github.com/razorpay/razorpay-python/pulls
+[issues]: https://github.com/thawani-pay/thawani-python/issues
+[pulls]: https://github.com/thawani-pay/thawani-python/pulls

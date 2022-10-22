@@ -71,7 +71,7 @@ client.order.create({
 | currency*        | string  | Currency of the order. Currently only `INR` is supported.       |
 | receipt         | string  | Your system order reference id.                                              |
 | notes         | array      | A key-value pair  |
-|bank_account | array  | All keys listed [here](https://razorpay.com/docs/payments/third-party-validation/#step-2-create-an-order) are supported |
+|bank_account | array  | All keys listed [here](https://thawani.com/docs/payments/third-party-validation/#step-2-create-an-order) are supported |
 
 **Response:**
 
@@ -208,8 +208,8 @@ client.order.payments(orderId)
       "card_id": null,
       "bank": null,
       "wallet": null,
-      "vpa": "success@razorpay",
-      "email": "sofiya.shaikh2@razorpay.com",
+      "vpa": "success@thawani",
+      "email": "sofiya.shaikh2@thawani.com",
       "contact": "+919702219003",
       "customer_id": "cust_JR4BVKjKyJ7enk",
       "token_id": "token_Jc81b6OBfodoi6",
@@ -277,4 +277,4 @@ client.order.edit(orderId,{
 **PN: * indicates mandatory fields**
 <br>
 <br>
-**For reference click [here](https://razorpay.com/docs/api/orders/)**
+**For reference click [here](https://thawani.com/docs/api/orders/)**

@@ -208,7 +208,7 @@ client.token.all(customerId)
 |---------------|-------------|---------------------------------------------|
 | customerId*          | string      | The id of the customer to be fetched |
 
- please refer this [doc](https://razorpay.com/docs/payments/third-party-validation/s2s-integration/upi/collect/#step-22-fetch-vpa-tokens-of-a-customer)
+ please refer this [doc](https://thawani.com/docs/payments/third-party-validation/s2s-integration/upi/collect/#step-22-fetch-vpa-tokens-of-a-customer)
 
 **Response:**
 ```json
@@ -256,4 +256,4 @@ client.token.all(customerId)
 **PN: * indicates mandatory fields**
 <br>
 <br>
-**For reference click [here](https://razorpay.com/docs/api/payments/recurring-payments/upi/tokens/)**
+**For reference click [here](https://thawani.com/docs/api/payments/recurring-payments/upi/tokens/)**

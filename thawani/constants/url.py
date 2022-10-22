@@ -1,5 +1,5 @@
 class URL(object):
-    BASE_URL = 'https://api.razorpay.com/v1'
+    BASE_URL = 'https://uatcheckout.thawani.om/api/v1'
     ORDER_URL = "/orders"
     INVOICE_URL = "/invoices"
     PAYMENT_LINK_URL = "/payment_links"
@@ -17,3 +17,5 @@ class URL(object):
     QRCODE_URL = "/payments/qr_codes"
     REGISTRATION_LINK_URL = "/subscription_registration"
     FUND_ACCOUNT_URL = "/fund_accounts"
+    CHECKOUT_SESSION_URL="/checkout/session"
+    PAYMENT_METHOD_URL="/payment_methods"

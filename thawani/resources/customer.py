@@ -19,6 +19,20 @@ class Customer(Resource):
         """
         return super(Customer, self).fetch(customer_id, data, **kwargs)
 
+    def delete(self, customer_id, data={}, **kwargs):
+        """"
+        Fetch Customer for given Id
+
+        Args:
+            customer_id : Id for which customer object has to be retrieved
+
+        Returns:
+            Order dict for given customer Id
+        """
+        return super(Customer, self).delete(customer_id, data, **kwargs)
+
+
+
     def create(self, data={}, **kwargs):
         """"
         Create Customer from given dict

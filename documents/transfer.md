@@ -28,7 +28,7 @@ client.payment.fetch(paymentId,{
 | Name          | Type        | Description                                 |
 |---------------|-------------|---------------------------------------------|
 | paymentId*   | string      | The id of the payment to be fetched  |
-| transfers   | object     | All parameters listed [here](https://razorpay.com/docs/api/route/#create-transfers-from-payments) are supported |
+| transfers   | object     | All parameters listed [here](https://thawani.com/docs/api/route/#create-transfers-from-payments) are supported |
 
 **Response:**
 ```json
@@ -50,7 +50,7 @@ client.payment.fetch(paymentId,{
   "bank": "UTIB",
   "wallet": null,
   "vpa": null,
-  "email": "void@razorpay.com",
+  "email": "void@thawani.com",
   "contact": "+919191919191",
   "notes": [],
   "fee": 171,
@@ -113,7 +113,7 @@ client.order.create({
 | amount*   | integer      | The transaction amount, in paise |
 | currency*   | string  | The currency of the payment (defaults to INR)  |
 |  receipt      | string      | A unique identifier provided by you for your internal reference. |
-| transfers   | object     | All parameters listed [here](https://razorpay.com/docs/api/route/#create-transfers-from-orders) are supported |
+| transfers   | object     | All parameters listed [here](https://thawani.com/docs/api/route/#create-transfers-from-orders) are supported |
 
 **Response:**
 ```json
@@ -542,7 +542,7 @@ client.payment.refund(paymentId,{
 
 ```py
 client.payment.all({
-  'X-Razorpay-Account':  linkedAccountId
+  'X-thawani-Account':  linkedAccountId
 })
 ```
 
@@ -550,7 +550,7 @@ client.payment.all({
 
 | Name          | Type        | Description                                 |
 |---------------|-------------|---------------------------------------------|
-| X-Razorpay-Account   | string      | The linked account id to fetch the payments received by linked account |
+| X-thawani-Account   | string      | The linked account id to fetch the payments received by linked account |
 
 **Response:**
 ```json
@@ -652,7 +652,7 @@ client.payment.transfer(paymentId,{
 | Name          | Type        | Description                                 |
 |---------------|-------------|---------------------------------------------|
 | paymentId*   | string      | The id of the payment to be fetched  |
-| transfers   | array     | All parameters listed [here](https://razorpay.com/docs/api/route/#hold-settlements-for-transfers) are supported |
+| transfers   | array     | All parameters listed [here](https://thawani.com/docs/api/route/#hold-settlements-for-transfers) are supported |
 
 **Response:**
 ```json
@@ -750,4 +750,4 @@ client.transfer.edit(transferId,{
 **PN: * indicates mandatory fields**
 <br>
 <br>
-**For reference click [here](https://razorpay.com/docs/api/route/#transfers/)**
+**For reference click [here](https://thawani.com/docs/api/route/#transfers/)**

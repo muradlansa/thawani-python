@@ -2,7 +2,7 @@ import responses
 import json
 
 from .helpers import ClientTestCase
-from razorpay.errors import BadRequestError, GatewayError, ServerError
+from thawani.errors import BadRequestError, GatewayError, ServerError
 
 
 class TestClientError(ClientTestCase):

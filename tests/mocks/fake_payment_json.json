@@ -1,7 +1,7 @@
 {
     "type": "respawn",
     "request": {
-        "url": "https://api.razorpay.com/v1/payments?key_id=rzp_test_pNL6H0AmbBEyjD",
+        "url": "https://api.thawani.com/v1/payments?key_id=rzp_test_pNL6H0AmbBEyjD",
         "method": "POST",
         "content": {
             "amount": "500",
@@ -33,9 +33,9 @@
     "missing": [
         "vpa"
     ],
-    "base": "api.razorpay.com",
+    "base": "api.thawani.com",
     "org_logo": "",
-    "org_name": "Razorpay Software Private Ltd",
-    "checkout_logo": "https://cdn.razorpay.com/logo.png",
+    "org_name": "thawani Software Private Ltd",
+    "checkout_logo": "https://cdn.thawani.com/logo.png",
     "custom_branding": false
 }

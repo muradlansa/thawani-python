@@ -33,21 +33,26 @@ for name, module in utility.__dict__.items():
 
 
 class Client:
-    """Razorpay client class"""
+    """thawani client class"""
 
     DEFAULTS = {
         'base_url': URL.BASE_URL
     }
 
-    def __init__(self, session=None, auth=None, **options):
+    def __init__(self, session=None, secret_key=None,publishable_key=None, **options):
         """
         Initialize a Client object with session,
         optional auth handler, and options
         """
         self.session = session or requests.Session()
-        self.auth = auth
-        file_dir = os.path.dirname(__file__)
-        self.cert_path = file_dir + '/ca-bundle.crt'
+        self.secret_key = secret_key
+        self.publishable_key=publishable_key
+
+
+     
+
+
+
 
         self.base_url = self._set_base_url(**options)
 
@@ -71,7 +76,7 @@ class Client:
         return base_url
 
     def _update_user_agent_header(self, options):
-        user_agent = "{}{} {}".format('Razorpay-Python/', self._get_version(),
+        user_agent = "{}{} {}".format('thawani-Python/', self._get_version(),
                                       self._get_app_details_ua())
 
         if 'headers' in options:
@@ -84,7 +89,7 @@ class Client:
     def _get_version(self):
         version = ""
         try: # nosemgrep : gitlab.bandit.B110
-            version = pkg_resources.require("razorpay")[0].version
+            version = pkg_resources.require("thawani")[0].version
         except DistributionNotFound:  # pragma: no cover
             pass
         return version
@@ -111,15 +116,18 @@ class Client:
 
     def request(self, method, path, **options):
         """
-        Dispatches a request to the Razorpay HTTP API
+        Dispatches a request to the thawani HTTP API
         """
         options = self._update_user_agent_header(options)
-
         url = "{}{}".format(self.base_url, path)
+        if 'headers' in options:
+            options['headers']['thawani-api-key'] = self.secret_key
+        else:
+            options['headers'] = {'thawani-api-key': self.secret_key}
+        response = getattr(self.session, method)(url,**options)
+        
+        print(url)
 
-        response = getattr(self.session, method)(url, auth=self.auth,
-                                                 verify=self.cert_path,
-                                                 **options)
         if ((response.status_code >= HTTP_STATUS_CODE.OK) and
                 (response.status_code < HTTP_STATUS_CODE.REDIRECT)):
             return json.dumps({}) if(response.status_code==204) else response.json()
@@ -127,12 +135,12 @@ class Client:
             msg = ""
             code = ""
             json_response = response.json()
-            if 'error' in json_response:
-                if 'description' in json_response['error']:
-                    msg = json_response['error']['description']
-                if 'code' in json_response['error']:
-                    code = str(json_response['error']['code'])
 
+            if json_response['success']==False:
+                if 'description' in json_response:
+                    msg = json_response['description']
+                if 'code' in json_response:
+                    code = str(json_response['code'])
             if str.upper(code) == ERROR_CODE.BAD_REQUEST_ERROR:
                 raise BadRequestError(msg)
             elif str.upper(code) == ERROR_CODE.GATEWAY_ERROR:

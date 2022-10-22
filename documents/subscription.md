@@ -35,7 +35,7 @@ client.subscription.create({
 | quantity      | integer | The number of times the customer should be charged the plan amount per invoice |
 | start_at    | integer | The timestamp, in Unix format, for when the subscription should start. If not passed, the subscription starts immediately after the authorization payment. |
 | expire_by    | integer | The timestamp, in Unix format, till when the customer can make the authorization payment. |
-| addons    | array  | All parameters listed [here](https://razorpay.com/docs/api/payments/subscriptions/#create-a-subscription) are supported |
+| addons    | array  | All parameters listed [here](https://thawani.com/docs/api/payments/subscriptions/#create-a-subscription) are supported |
 | notes          | array | Notes you can enter for the contact for future reference.   |
 | offer_id   | string | The unique identifier of the offer that is linked to the subscription. |
 
@@ -112,9 +112,9 @@ client.subscription.create({
 | quantity    | integer | The number of times the customer should be charged the plan amount per invoice |
 | start_at    | integer | The timestamp, in Unix format, for when the subscription should start. If not passed, the subscription starts immediately after the authorization payment. |
 | expire_by    | integer | The timestamp, in Unix format, till when the customer can make the authorization payment. |
-| addons    | array  | All parameters listed [here](https://razorpay.com/docs/api/payments/subscriptions/#create-a-subscription-link) are supported |
+| addons    | array  | All parameters listed [here](https://thawani.com/docs/api/payments/subscriptions/#create-a-subscription-link) are supported |
 | notes          | array | Notes you can enter for the contact for future reference.   |
-| notify_info    | array  | All parameters listed [here](https://razorpay.com/docs/api/payments/subscriptions/#create-a-subscription-link) are supported |
+| notify_info    | array  | All parameters listed [here](https://thawani.com/docs/api/payments/subscriptions/#create-a-subscription-link) are supported |
 | offer_id   | string | The unique identifier of the offer that is linked to the subscription. |
 
 **Response:**
@@ -315,7 +315,7 @@ client.subscription.update(subscriptionId,options)
 | Name  | Type      | Description                                      |
 |-------|-----------|--------------------------------------------------|
 | subscriptionId*  | string | The id of the subscription to be updated  |
-| options  | object | All parameters listed [here](https://razorpay.com/docs/api/subscriptions/#update-a-subscription) for update   |
+| options  | object | All parameters listed [here](https://thawani.com/docs/api/subscriptions/#update-a-subscription) for update   |
 
 **Response:**
 ```json
@@ -699,16 +699,16 @@ client.subscription.delete_offer(subscriptionId, offerId)
 
 ### Authentication Transaction
 
-Please refer this [doc](https://razorpay.com/docs/api/subscriptions/#authentication-transaction) for authentication of transaction
+Please refer this [doc](https://thawani.com/docs/api/subscriptions/#authentication-transaction) for authentication of transaction
 
 -------------------------------------------------------------------------------------------------------
 
 ### Payment verification
 ```py
 client.utility.verify_payment_signature({
-   'razorpay_order_id': razorpay_order_id,
-   'razorpay_payment_id': razorpay_payment_id,
-   'razorpay_signature': razorpay_signature
+   'thawani_order_id': thawani_order_id,
+   'thawani_payment_id': thawani_payment_id,
+   'thawani_signature': thawani_signature
    })
 ```
 **Parameters:**
@@ -718,11 +718,11 @@ client.utility.verify_payment_signature({
 | body*   | object      | the response object of the successful payment `payment_id`, `order_id` and `signature` |
 | secret*   | string      | The secret that was generated from the Dashboard |
 
-Please refer this [doc](https://razorpay.com/docs/api/subscriptions/#payment-verification) for payment verification
+Please refer this [doc](https://thawani.com/docs/api/subscriptions/#payment-verification) for payment verification
 
 -------------------------------------------------------------------------------------------------------
 
 **PN: * indicates mandatory fields**
 <br>
 <br>
-**For reference click [here](https://razorpay.com/docs/api/subscriptions/#subscriptions)**
+**For reference click [here](https://thawani.com/docs/api/subscriptions/#subscriptions)**

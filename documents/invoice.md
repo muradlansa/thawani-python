@@ -54,8 +54,8 @@ client.invoice.create({
 |description        | string  | A brief description of the invoice.                      |
 |customer_id           | string  | customer id for which invoice need be raised   |
 |draft           | string  |  Invoice is created in draft state when value is set to `1`   |
-| customer*     | array | All parameters listed [here](https://razorpay.com/docs/api/payments/invoices/#create-an-invoice) are supported           |
-| line_items    | array | All parameters listed [here](https://razorpay.com/docs/api/payments/invoices/#create-an-invoice) are supported |
+| customer*     | array | All parameters listed [here](https://thawani.com/docs/api/payments/invoices/#create-an-invoice) are supported           |
+| line_items    | array | All parameters listed [here](https://thawani.com/docs/api/payments/invoices/#create-an-invoice) are supported |
 |expire_by           | array  | Details of the line item that is billed in the invoice.  |
 |sms_notify           | array  | Details of the line item that is billed in the invoice.  |
 |email_notify           | array  | Details of the line item that is billed in the invoice.  |
@@ -87,7 +87,7 @@ client.invoice.create({
 |customer           | object  | customer details in a object format                     |
 
 **Response:**
-For create invoice response please click [here](https://razorpay.com/docs/api/invoices/#create-an-invoice)
+For create invoice response please click [here](https://thawani.com/docs/api/invoices/#create-an-invoice)
 
 -------------------------------------------------------------------------------------------------------
 
@@ -107,7 +107,7 @@ client.invoice.all()
 |receipt           | string  |  The unique receipt number that you entered for internal purposes.                     |
 
 **Response:**
-For fetch all invoice response please click [here](https://razorpay.com/docs/api/invoices/#fetch-multiple-invoices)
+For fetch all invoice response please click [here](https://thawani.com/docs/api/invoices/#fetch-multiple-invoices)
 
 -------------------------------------------------------------------------------------------------------
 
@@ -251,7 +251,7 @@ client.invoice.edit(invoiceId,{
 | Name            | Type    | Description                                                                  |
 |-----------------|---------|------------------------------------------------------------------------------|
 | invoiceId*          | string | The id of the invoice to be fetched                         |
-| line_items    | array | All parameters listed [here](https://razorpay.com/docs/api/payments/invoices/#update-an-invoice) are supported |
+| line_items    | array | All parameters listed [here](https://thawani.com/docs/api/payments/invoices/#update-an-invoice) are supported |
 | notes    | array | key value pair |
 
 **Response:**
@@ -624,4 +624,4 @@ client.invoice.notify_by(invoiceId,medium)
 **PN: * indicates mandatory fields**
 <br>
 <br>
-**For reference click [here](https://razorpay.com/docs/api/invoices)**
+**For reference click [here](https://thawani.com/docs/api/invoices)**

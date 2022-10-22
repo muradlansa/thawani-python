@@ -5,6 +5,7 @@ from .resources import Refund
 from .resources import Invoice
 from .resources import PaymentLink
 from .resources import Customer
+from .resources import Checkout
 from .resources import Card
 from .resources import Token
 from .resources import Transfer
@@ -44,4 +45,5 @@ __all__ = [
         'Qrcode',
         'HTTP_STATUS_CODE',
         'ERROR_CODE',
+        'Checkout',
 ]
