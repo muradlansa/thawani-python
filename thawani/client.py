@@ -35,29 +35,26 @@ for name, module in utility.__dict__.items():
 class Client:
     """thawani client class"""
 
-    DEFAULTS = {
-        'base_url': URL.BASE_URL
-    }
-
-    def __init__(self, session=None, secret_key=None,publishable_key=None, **options):
+    def __init__(self, session=None, data=None, **options):
         """
         Initialize a Client object with session,
         optional auth handler, and options
         """
         self.session = session or requests.Session()
-        self.secret_key = secret_key
-        self.publishable_key=publishable_key
+        self.secret_key =data.get('secret_key')
+        self.publishable_key=data.get('publishable_key')        
+        if data.get('use_sandbox')==1:
+            self.base_url = URL.SANDBOX_URL  
+            self.endpoint = URL.SANDBOX_ENDPOINT
+        else:
+            self.base_url = URL.PROD_URL  
+            self.endpoint = URL.PROD_ENDPOINT
 
 
-     
-
-
-
-
-        self.base_url = self._set_base_url(**options)
-
+        print( self.secret_key)
+        print( self.publishable_key)
+        print( self.base_url)
         self.app_details = []
-
         # intializes each resource
         # injecting this client object into the constructor
         for name, Klass in RESOURCE_CLASSES.items():
@@ -66,14 +63,6 @@ class Client:
         for name, Klass in UTILITY_CLASSES.items():
             setattr(self, name, Klass(self))
 
-    def _set_base_url(self, **options):
-        base_url = self.DEFAULTS['base_url']
-
-        if 'base_url' in options:
-            base_url = options['base_url']
-            del(options['base_url'])
-
-        return base_url
 
     def _update_user_agent_header(self, options):
         user_agent = "{}{} {}".format('thawani-Python/', self._get_version(),
@@ -124,10 +113,8 @@ class Client:
             options['headers']['thawani-api-key'] = self.secret_key
         else:
             options['headers'] = {'thawani-api-key': self.secret_key}
-        response = getattr(self.session, method)(url,**options)
         
-        print(url)
-
+        response = getattr(self.session, method)(url,**options)
         if ((response.status_code >= HTTP_STATUS_CODE.OK) and
                 (response.status_code < HTTP_STATUS_CODE.REDIRECT)):
             return json.dumps({}) if(response.status_code==204) else response.json()
@@ -196,3 +183,13 @@ class Client:
         options['headers'].update({'Content-type': 'application/json'})
 
         return data, options
+
+    def generate_payment_link(self,data):
+        if data.get('success')==True:
+            url = "{}{}/{}?key={}".format(self.endpoint, URL.PAYMENT_LINK,data['data']['session_id'],self.publishable_key)
+            return url
+        else:
+            return data
+    
+
+

@@ -5,7 +5,7 @@ with open('README.md') as readme:
 
 setup(
     name="thawani",
-    version="1.0.1",
+    version="1.1.3",
     description="Thawani Python Client",
     long_description=readme_content,
     long_description_content_type='text/markdown',

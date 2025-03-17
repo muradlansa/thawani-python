@@ -28,8 +28,18 @@ class Checkout(Resource):
         """
         url = self.base_url
         return self.post_url(url, data, **kwargs)
+    
+    
+    def fetch_session_by_client_id(self, client_id=None, **kwargs):
+        """"
+        Create Checkout from given dict
 
-
+        Returns:
+            Checkout Dict which was created
+        """        
+        self.base_url = URL.CHECKOUT_SESSION_BY_REFERENCE_ID
+        return super(Checkout, self).fetch(client_id, {}, **kwargs)
+ 
     
     def all(self, data={}, **kwargs):
         """"

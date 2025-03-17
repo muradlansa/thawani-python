@@ -18,6 +18,7 @@ from .item import Item
 from .fund_account import FundAccount
 from .checkout import Checkout
 from .payment_method import PaymentMethod
+from .payment_intent import PaymentIntent
 __all__ = [
     'Payment',
     'Refund',
@@ -38,5 +39,6 @@ __all__ = [
     'QrCode',
     'FundAccount',
     'Checkout',
-    'PaymentMethod'
+    'PaymentMethod',
+    "PaymentIntent"
 ]

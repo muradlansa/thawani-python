@@ -21,40 +21,20 @@ import thawani
 client = thawani.Client(secret_key="<Secret_KEY>",publishable_key="<Publishable_KEY>")
 ```
 
-## App Details
 
-After setting up client, you can set your app details before making any request
-to thawani using the following:
-
-```py
-client.set_app_details({"title" : "<YOUR_APP_TITLE>", "version" : "<YOUR_APP_VERSION>"})
-```
-
-For example, you can set the title to `Django` and version to `1.8.17`. Please ensure
-that both app title and version are strings.
 
 ## Supported Resources
 
 
 - [Customer](documents/customer.md)
 
-- [Token](documents/token.md)
-
-- [Order](documents/order.md)
-
 - [Payments](documents/payment.md)
-
-- [Settlements](documents/settlement.md)
 
 - [Refunds](documents/refund.md)
 
 - [Invoice](documents/invoice.md)
 
-- [Subscriptions](documents/subscription.md)
 
-- [Payment Links](documents/paymentLink.md)
-
-- [Smart Collect](documents/virtualAccount.md)
 
 
 

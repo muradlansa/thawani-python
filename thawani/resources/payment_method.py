@@ -16,3 +16,15 @@ class PaymentMethod(Resource):
         """
         return super(PaymentMethod, self).all(data, **kwargs)
     
+    def delete(self, card_id, **kwargs):
+        """"
+        Delete an invoice
+        You can delete an invoice which is in the draft state.
+
+        Args:
+            invoice_id : Id for delete the invoice
+        Returns:
+            The response is always be an empty array like this - []
+        """
+        url = "{}/{}".format(self.base_url, card_id)
+        return self.delete_url(url, {}, **kwargs)
